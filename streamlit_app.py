@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import matplotlib
+matplotlib.use('Agg')  # Set the backend before importing pyplot
 import matplotlib.pyplot as plt
 import seaborn as sns
 from sklearn.model_selection import train_test_split
@@ -435,4 +437,5 @@ if uploaded_file is not None:
         st.pyplot(fig)
 
 else:
+
     st.info("👆 Please upload your CSV file to start the analysis")
